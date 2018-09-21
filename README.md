@@ -1,3 +1,5 @@
+[![Cobinhood](https://i.imgur.com/3eAEQN2.png)](https://cobinhood.com/)
+
 # Cobwolf
 An opensource Cobinhood trading bot
 
@@ -44,7 +46,7 @@ The config file for selling. It is important to be carefull while modifying it i
 | variable | options |
 | ------ | ------ |
 | trading_pair | A trading pair available on Cobinhood (Examples: ETH-BTC, USDT-BTC etc..).|
-| amount | The amount of coin (that you have in your wallet) you want to use to sell (Important: By setting more than you have in your cobinhood wallet, the bot will crash).|
+| amount | The amount of coin (that you have in your wallet) you want to use to sell (Important: By specifying more than you have in your cobinhood wallet, the bot will crash).|
 | minimum_price | The minimum price that the bot will use to sell the asset (E.G. The price at which you bought the asset first).|
 | minimum_profit | Simple maths: minimum_price + minimum_profit = Minimum price the bot will sell.|
 | price_steps | The steps which the bot will use to change its offer when your current order has been outbidded by someone else (Important: Do not use smaller price steps than the asset supports). |
