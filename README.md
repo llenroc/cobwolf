@@ -6,7 +6,7 @@ An opensource Cobinhood trading bot
 NOTICE: This project is still under development, and has no stable working product yet.
 Therefore, it is HIGHLY disencouraged to use this bot beside from development.
 
-### What does it do?
+#### What does it do?
 
 Cobwolf is a cryptocurrency trading bot that currently only supports selling your assets at the best possible price.
 It creates a sellorder with the given data in sellbot_config.json and tries to maintain the lowest price while still making profit. It continuously looks at the lowest price in the public orderbook and modifies its sellorder with the specified pricesteps so it becomes the cheapest sellorder. Why? because everyone that wants to buy this asset, will buy yours first.
@@ -16,6 +16,11 @@ It creates a sellorder with the given data in sellbot_config.json and tries to m
 Installation:
 ```sh
 $ npm install
+```
+
+Or build from scratch:
+```sh
+$ git clone https://github.com/W4G1/cobwolf.git && cd cobwolf/ && npm install
 ```
 
 Start the sell bot:
@@ -39,7 +44,7 @@ sellbot_config.json example:
 }
 ```
 
-### sellbot_config.json explained
+#### sellbot_config.json explained
 
 The config file for selling. It is important to be carefull while modifying it in order to not lose your funds.
 
