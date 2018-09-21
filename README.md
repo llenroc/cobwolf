@@ -23,7 +23,7 @@ Or build from scratch:
 $ git clone https://github.com/W4G1/cobwolf.git && cd cobwolf/ && npm install
 ```
 
-Start the sell bot:
+Start the sell bot (Modify sellbot_config.json file first!):
 ```sh
 $ npm start
 ```
@@ -32,7 +32,7 @@ $ npm start
 
 sellbot_config.json example:
 
-```
+```json
 {
   "trading_pair": "ETH-BTC",
   "amount": "0.5",
