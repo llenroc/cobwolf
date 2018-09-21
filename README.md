@@ -20,7 +20,7 @@ $ npm install
 
 Start the sell bot:
 ```sh
-$ npm run sellbot
+$ npm start
 ```
 
 ### Configuration
