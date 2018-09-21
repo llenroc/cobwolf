@@ -1,6 +1,7 @@
 // CobWolf - Opensource Cobinhood Trading Bot
 const color = require('chalk');
 const fs = require('fs');
+const consoleOutput = require('./modules/consoleOutput');
 
 var configData = fs.readFileSync('sellbot_config.json', 'utf8')
 const config = JSON.parse(configData);
@@ -68,7 +69,7 @@ function bot_modifyOrder() {
 
                         client.modifyOrder(order_id, config_tradingPair, order_newPrice, order_amount);
 
-                        console.log('\033c');
+                        consoleOutput.clear;
                         //------------------------------------------------------
                         console.log(color.bgHex('#292929')
                         ('                                                       '));
@@ -178,7 +179,7 @@ function bot_modifyOrder() {
 
                         client.modifyOrder(order_id, config_tradingPair, order_newPrice, order_amount);
                         
-                        console.log('\033c');
+                        consoleOutput.clear;
                         //------------------------------------------------------
                         console.log(color.bgHex('#292929')
                         ('                                                       '));
@@ -285,23 +286,8 @@ function bot_modifyOrder() {
             });
     })
     .catch((err) => {
-                
-        console.log('\033c');
-        console.log('\033c');
-        //------------------------------------------------------
-        console.log(color.bgHex('#292929')
-        ('                                                       '));
-        console.log(color.bgHex('#292929').hex('#C0C0C0')
-        ('  Bot: ') +
-        color.bgHex('#292929').hex('#DC143C')
-        ('OFFLINE') +
-        color.bgHex('#292929').hex('#C0C0C0')
-        ('  Last Status: ') +
-        color.bgHex('#292929').hex('#FF8C00')
-        ('[..] WAITING FOR ORDER    '));
-        //------------------------------------------------------
-        console.log(color.bgHex('#292929')
-        ('                                                       '));
+
+        consoleOutput.print('WaitingForOrder');
 
     });
 }
@@ -324,20 +310,6 @@ switch (config_botSpeed) {
         break;
 }
 
-console.log('\033c');
-//------------------------------------------------------
-console.log(color.bgHex('#292929')
-('                                                       '));
-console.log(color.bgHex('#292929').hex('#C0C0C0')
-('  Bot: ') +
-color.bgHex('#292929').hex('#DC143C')
-('OFFLINE') +
-color.bgHex('#292929').hex('#C0C0C0')
-('  Last Status: ') +
-color.bgHex('#292929').hex('#FF8C00')
-('STARTING BOT              '));
-//------------------------------------------------------
-console.log(color.bgHex('#292929')
-('                                                       '));
+consoleOutput.print('StartingBot');
 
 setInterval(bot_modifyOrder, botSpeed); // Time in ms
