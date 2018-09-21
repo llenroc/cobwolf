@@ -1,0 +1,6 @@
+{
+  "trading_pair": "ETH-BTC",
+  "maximum_price": "0.077420",
+  "minimum_margin": "0.000150",
+  "price_steps": "0.000001"
+}

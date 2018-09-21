@@ -1,0 +1,9 @@
+{
+  "trading_pair": "ETH-BTC",
+  "amount": "0.5",
+  "minimum_price": "0.077000",
+  "minimum_profit": "0.000100",
+  "price_steps": "0.000001",
+  "bot_speed": "fast",
+  "api_key": "API_KEY"
+}
